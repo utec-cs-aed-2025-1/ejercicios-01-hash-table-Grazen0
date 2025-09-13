@@ -306,10 +306,17 @@ template <typename K, typename T> class ChainHash {
         const size_t new_capacity = capacity * 2;
         auto *const new_buckets = new LinkedList<Entry>[new_capacity]();
 
+        used_buckets = 0;
+
         for (size_t i = 0; i < capacity; ++i) {
-            for (const Entry &entry : buckets[i]) {
+            while (!buckets[i].empty()) {
+                const Entry entry = buckets[i].pop_front();
                 const size_t new_index = entry.hash % new_capacity;
+
                 new_buckets[new_index].push_front(std::move(entry));
+
+                if (new_buckets->size() == 1)
+                    ++used_buckets;
             }
         }
 
