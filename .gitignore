@@ -4,3 +4,5 @@ desktop.ini
 
 # Ignore VS Code settings folder
 .vscode/
+
+*.out
