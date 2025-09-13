@@ -9,6 +9,8 @@
 
 ![p2](https://raw.githubusercontent.com/utec-cs-aed-2025-1/ejercicios-01-hash-table-Grazen0/refs/heads/main/screenshot_p2.png)
 
+![p3](https://raw.githubusercontent.com/utec-cs-aed-2025-1/ejercicios-01-hash-table-Grazen0/refs/heads/main/screenshot_p3.png)
+
 ## Descripción
 
 Implementar una tabla hash que utiliza **chaining** para resolver colisiones mediante listas enlazadas manuales. La clase `ChainHash` utiliza nodos para crear cadenas en cada bucket.
